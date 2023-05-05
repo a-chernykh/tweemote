@@ -1,0 +1,23 @@
+@import '../variables.less';
+@import '../mixins.less';
+
+footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 60px;
+
+  background-color: @footerBg;
+  color: @footerColor;
+  font-weight: 300;
+  .sectionMixin();
+
+  a {
+    color: @footerColor;
+
+    &:hover {
+      color: darken(@footerColor, 30%);
+      transition: all 0.5s ease;
+    }
+  }
+}

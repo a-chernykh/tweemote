@@ -1,0 +1,6 @@
+{
+  "name": "TwitterAccountLink",
+  "version": "0.0.0",
+  "private": true,
+  "main": "./TwitterAccountLink.js"
+}

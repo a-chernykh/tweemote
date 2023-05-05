@@ -1,0 +1,6 @@
+{
+  "name": "LinkTwitterCallback",
+  "version": "0.0.0",
+  "private": true,
+  "main": "./LinkTwitterCallback.js"
+}

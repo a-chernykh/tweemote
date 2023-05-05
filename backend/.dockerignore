@@ -1,0 +1,12 @@
+.git
+.gitignore
+backups
+env
+docker-compose.yml
+Dockerfile.build
+Dockerfile
+Makefile
+vendor/*/
+!vendor/vendor.json
+tags
+backup

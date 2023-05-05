@@ -1,0 +1,49 @@
+---
+keywords:
+  - name: webdriver
+  - name: web automation
+  - name: browser automation
+  - name: automation framework
+  - name: cucumber website
+  - name: cucumber testing
+  - name: cucumber tutorial
+  - name: cucumber selenium
+  - name: cucumber automation
+  - name: cucumber gherkin
+  - name: cucumber testing
+  - name: ruby cucumber
+  - name: learn cucumber testing
+  - name: selenium interview
+  - name: selenium testing
+  - name: selenium firefox
+  - name: selenium chrome
+  - name: selenium framework
+  - name: selenium training
+  - name: selenium automation
+  - name: selenium ruby
+  - name: selenium cucumber
+  - name: selenium gecko
+  - name: selenium firefox
+  - name: selenium chrome
+  - name: selenium safari
+  - name: selenium android
+  - name: selenium ios
+  - name: appium
+  - name: software tester
+  - name: software testing
+  - name: unit testing
+  - name: watir ruby
+stop_words:
+  - fuck
+  - dick
+  - sex
+  - job
+  - jobs
+  - vacancy
+  - cosmetics
+twitter:
+  consumer_key: redacted
+  consumer_secret: redacted
+  # qainstructor user
+  access_token: redacted
+  access_token_secret: redacted

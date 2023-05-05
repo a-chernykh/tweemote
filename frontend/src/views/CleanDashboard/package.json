@@ -1,0 +1,6 @@
+{
+  "name": "CleanDashboard",
+  "version": "0.0.0",
+  "private": true,
+  "main": "./CleanDashboard.js"
+}

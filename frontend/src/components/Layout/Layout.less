@@ -1,0 +1,97 @@
+@import '~bootstrap/dist/css/bootstrap.css';
+@import url('https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,500,500i,700,700i');
+
+@import '../variables.less';
+@import '../mixins.less';
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  margin-bottom: 180px;
+}
+
+a {
+  text-decoration: underline;
+}
+
+a.btn,
+a.navbar-brand,
+.dropdown-menu a {
+  text-decoration: none;
+}
+
+h1 {
+  font-size: 42px;
+  font-weight: 300;
+}
+
+h2, p {
+  font-size: 18px;
+  line-height: 24px;
+  font-weight: 300;
+}
+
+.header {
+  .color1section();
+  padding-bottom: 40px;
+
+  img {
+    width: 360px;
+    margin-right: 40px;
+    margin-top: -30px;
+  }
+
+  a {
+    color: @section1Color;
+  }
+}
+
+.how {
+  padding: 40px 0px;
+
+  dl {
+    margin-top: @contentMargin;
+
+    dt {
+      font-size: 20px;
+      font-weight: 400;
+    }
+
+    dd {
+      font-size: 16px;
+      font-weight: 300;
+      margin-bottom: 18px;
+    }
+  }
+}
+
+.features {
+  padding-bottom: @contentMargin;
+
+  .features-list {
+    margin-top: @contentMargin;
+
+    .feature {
+      h2 {
+        margin-top: 0px;
+        font-weight: 400;
+      }
+
+      i {
+        font-size: 80px;
+        float: left;
+      }
+
+      .feature-content {
+        position: relative;
+        left: 14px;
+      }
+    }
+  }
+}
+
+@import '~font-awesome/css/font-awesome.css';

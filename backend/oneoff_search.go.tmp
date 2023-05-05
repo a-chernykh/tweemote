@@ -1,0 +1,24 @@
+package main
+
+import (
+	"bitbucket.org/andreychernih/tweemote/errors"
+	"bitbucket.org/andreychernih/tweemote/models"
+	"bitbucket.org/andreychernih/tweemote/twitter"
+	"github.com/golang/glog"
+)
+
+func oneoff_search() {
+	var ta models.TwitterAccount
+
+	db := models.Connect()
+	db.First(&ta)
+
+	api := twitter.NewTwitterAccountAPI(&ta)
+	tweets, err := api.Search("selenium", 1000)
+	errors.Check(err)
+
+	glog.Info(len(tweets))
+
+	for _, tweet := range tweets {
+	}
+}

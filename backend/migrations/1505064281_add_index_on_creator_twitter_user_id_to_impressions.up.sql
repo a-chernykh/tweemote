@@ -1,0 +1,1 @@
+CREATE INDEX impressions_actor_twitter_user_id_key ON impressions (actor_twitter_user_id);

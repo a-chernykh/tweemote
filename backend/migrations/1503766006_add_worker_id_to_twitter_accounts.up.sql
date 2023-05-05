@@ -1,0 +1,1 @@
+ALTER TABLE twitter_accounts ADD COLUMN worker_id INTEGER REFERENCES workers(id) ON DELETE SET NULL;

@@ -1,0 +1,6 @@
+{
+  "name": "UserDashboard",
+  "version": "0.0.0",
+  "private": true,
+  "main": "./UserDashboard.js"
+}

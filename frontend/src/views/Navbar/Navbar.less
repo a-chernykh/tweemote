@@ -1,0 +1,32 @@
+@import '../../components/variables.less';
+
+header {
+  .navbar-default {
+    position: relative;
+    background-color: @navbarBackgroundColor;
+    border-bottom: 0;
+    margin-bottom: 0;
+    padding: @contentMargin 0px;
+  }
+
+  ul.navbar-guest {
+    li {
+      a:not(.btn) {
+        color: @navbarLinkColor;
+        text-transform: uppercase;
+        font-weight: 500;
+        text-decoration: underline;
+
+        &:hover {
+          color: @navbarHoverColor;
+          background-color: @navbarHoverBackgroundColor;
+          transition: all 0.5s ease;
+        }
+      }
+    }
+
+    a.btn {
+      margin-left: 10px;
+    }
+  }
+}

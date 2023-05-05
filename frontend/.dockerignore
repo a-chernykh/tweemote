@@ -1,0 +1,9 @@
+.git
+.gitignore
+docker-compose.yml
+Dockerfile.build
+Dockerfile
+Makefile
+dist
+node_modules
+tags

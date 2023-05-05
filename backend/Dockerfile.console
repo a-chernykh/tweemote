@@ -1,0 +1,23 @@
+FROM golang:1.8.3
+
+ENV PACKAGE_NAME bitbucket.org/andreychernih/tweemote
+ENV APP_DIR ${GOPATH}/src/${PACKAGE_NAME}
+ENV VENDOR_DIR ${APP_DIR}/vendor
+
+RUN mkdir -p ${APP_DIR}
+WORKDIR ${APP_DIR}
+
+RUN go get -u github.com/nsf/gocode
+RUN go get -u github.com/k0kubun/pp
+RUN go get -u github.com/motemen/gore
+
+# TODO lock govendor version
+RUN go get github.com/kardianos/govendor
+CMD go-wrapper run
+
+RUN mkdir ${VENDOR_DIR}
+COPY vendor/vendor.json ${VENDOR_DIR}/vendor.json
+RUN govendor sync
+
+COPY . ${APP_DIR}
+RUN go-wrapper install

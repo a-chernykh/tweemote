@@ -1,0 +1,23 @@
+
+[ ] Add /healthz endpoint
+[ ] HTTP request timeout
+
+
+Bugs:
+-----
+
+
+Features:
+--------
+* Do not like tweets with the same text more than N times. Example: (by the same user?)
+  2017/03/19 16:37:47 Processing: {216 841158217916862465 24357809 naresh chilukuru tweeting from automation Framework 391489382657471}
+  2017/03/19 16:37:52 Processing: {217 841158224841658369 24357809 naresh chilukuru tweeting from automation Framework 401489382657471}
+  2017/03/19 16:37:57 Processing: {218 841158231703543809 24357809 naresh chilukuru tweeting from automation Framework 411489382657471}
+  2017/03/19 16:38:02 Processing: {219 841158238552834048 24357809 naresh chilukuru tweeting from automation Framework 421489382657471}
+  2017/03/19 16:38:07 Processing: {220 841158245322432512 24357809 naresh chilukuru tweeting from automation Framework 431489382657471}
+* Limit number of likes for a given user. Example:
+  2017/03/19 16:49:41 Processing: {335 841222178376974336 812646813203333120 176 dom in selenium webdriver: https://t.co/cJavDrlDq1 via @YouTube}
+  2017/03/19 16:49:57 Processing: {336 841222190758539265 812646813203333120 أضفت فيديو إلى قائمة تشغيل @YouTube على https://t.co/cJavDrlDq1 176 dom in selenium webdriver}
+  2017/03/19 16:50:12 Processing: {338 841224667692183553 812646813203333120 02 Why Selenium Webdriver: https://t.co/pUTOJE7FwZ via @YouTube}
+  2017/03/19 16:50:23 Processing: {339 841224915542016000 812646813203333120 001 Welcome to Python and Selenium WebDriver: https://t.co/NKkxHOZVmn via @YouTube}
+  2017/03/19 16:50:29 Processing: {340 841224916108234752 812646813203333120 أضفت فيديو إلى قائمة تشغيل @YouTube على https://t.co/NKkxHOZVmn 001 Welcome to Python and Selenium WebDriver}

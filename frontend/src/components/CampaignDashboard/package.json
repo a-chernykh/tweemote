@@ -1,0 +1,6 @@
+{
+  "name": "CampaignDashboard",
+  "version": "0.0.0",
+  "private": true,
+  "main": "./CampaignDashboard.js"
+}

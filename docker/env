@@ -1,0 +1,4 @@
+DATABASE_URL=postgres://postgres:w0ntt3lly0u@postgres/tweemote?sslmode=disable
+AMQP_URL=amqp://tweemote:w0ntt3lly0u@rabbitmq:5672/tweemote
+ENV=development
+ROLLBAR_TOKEN=123

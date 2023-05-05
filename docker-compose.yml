@@ -1,0 +1,86 @@
+version: '3'
+
+services:
+  postgres:
+    build: docker/postgres
+    environment:
+      POSTGRES_DB: tweemote
+      POSTGRES_PASSWORD: w0ntt3lly0u
+    volumes:
+      - postgres:/var/lib/postgresql/data
+    ports:
+      - "5432:5432"
+
+  rabbitmq:
+    build: docker/rabbitmq
+    environment:
+      RABBITMQ_DEFAULT_VHOST: tweemote
+      RABBITMQ_DEFAULT_USER: tweemote
+      RABBITMQ_DEFAULT_PASS: w0ntt3lly0u
+    volumes:
+      - rabbitmq:/var/lib/rabbitmq
+    ports:
+      - "5672:5672"
+      - "15672:15672"
+
+  nginx:
+    build: docker/nginx
+    ports:
+      - "80:80"
+      - "443:443"
+    volumes:
+      - ./docker/nginx/ssl/lvh.me.key:/etc/nginx/ssl/host.key
+      - ./docker/nginx/ssl/lvh.me.crt:/etc/nginx/ssl/host.crt
+    depends_on:
+      - server
+      - frontend
+
+  frontend:
+    build: ./frontend
+
+  ingest: &app
+    build: ./backend
+    env_file: ./docker/env
+    environment:
+     LOGDB: 1
+    #  DEBUG: 1
+    command: ["tweemote", "ingest"]
+    depends_on:
+      - postgres
+      - rabbitmq
+    restart: on-failure:3
+
+  console:
+    <<: *app
+    build:
+      context: ./backend
+      dockerfile: Dockerfile.console
+    command: ["/bin/bash"]
+
+  persist:
+    <<: *app
+    command: ["tweemote", "persist"]
+
+  impress:
+    <<: *app
+    command: ["tweemote", "impress"]
+
+  process_user_queues:
+    <<: *app
+    command: ["tweemote", "process_user_queues"]
+
+  act:
+    <<: *app
+    command: ["tweemote", "act"]
+
+  stats:
+    <<: *app
+    command: ["tweemote", "stats", "-period-seconds", "3600"]
+
+  server:
+    <<: *app
+    command: ["tweemote", "server"]
+
+volumes:
+  postgres:
+  rabbitmq:

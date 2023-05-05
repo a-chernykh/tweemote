@@ -1,0 +1,11 @@
+@import './variables.less';
+
+.sectionMixin {
+  padding: 80px 0px;
+}
+
+.color1section {
+  .sectionMixin();
+  background-color: @section1Bg;
+  color: @section1Color;
+}
